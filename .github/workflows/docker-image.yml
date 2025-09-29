@@ -43,4 +43,4 @@ jobs:
           cd /var/www/docker/nodejs-application
           docker-compose pull
           docker-compose up -d --build    
-          docker exec nodejs-db mysql -uuser -ppassword -e "insert into users(id,nama,alamat) values (01,'destia','sleman')"; testdb
+          docker exec nodejs-db mysql -uuser -ppassword -e "use testdb; insert into users(id,nama,alamat) values (01,'destia','sleman')";
