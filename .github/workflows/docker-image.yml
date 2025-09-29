@@ -60,6 +60,7 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: 2112
         script: |
+          git config --global --add safe.directory /var/www/nodejs-application
           cd /var/www/nodejs-application
           git pull origin main
           docker-compose up -d --build    
