@@ -16,7 +16,7 @@ services:
       - mynet
 
   app:
-    image: destiaeka/nodejs:latest
+    image: destiaeka/nodejs-mysql-app:latest
     container_name: nodejs-app
     depends_on:
       - db
